@@ -30,5 +30,5 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    sample-type: python-sample
+    app: python-sample
   type: LoadBalancer
