@@ -24,7 +24,7 @@ apiVersion: build.openshift.io/v1
           from:
             kind: ImageStreamTag
             name: 'ubuntu:latest'
-            namespace: snowdeer-proj
+            
         type: Docker    
       successfulBuildsHistoryLimit: 5 
       output:
