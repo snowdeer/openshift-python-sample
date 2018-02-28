@@ -11,7 +11,7 @@ spec:
         app: python-sample
     spec:
       containers:
-      - image:  snowdeer/python-sample:v5
+      - image:  snowdeer/python-sample:latest
         name: python-sample
         ports:
         - containerPort: 8080
