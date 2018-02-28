@@ -38,8 +38,8 @@ metadata:
   name: python-sample
   labels:
     app: python-sample
-  annotations:
-    template.alpha.openshift.io/wait-for-ready: true
+    annotations:
+      'template.alpha.openshift.io/wait-for-ready': true
 spec:
   strategy: Rolling
   triggers:
