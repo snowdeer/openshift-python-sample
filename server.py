@@ -6,7 +6,7 @@ app.debug = True
 
 
 @app.route('/')
-def hello():
+def index():
     return 'Hello, World'
 
 
