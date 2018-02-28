@@ -1,4 +1,4 @@
-apiVersion: build.openshift.io/v1
+apiVersion: extensions/v1
   kind: BuildConfig
     metadata:
       labels:
