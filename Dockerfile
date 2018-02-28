@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu
 
 # basic setting for python
 RUN apt-get update
