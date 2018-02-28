@@ -1,15 +1,21 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 
-RUN apt-get update && apt-get install -y python python-pip
+# basic setting for python
+RUN apt-get update
+RUN apt-get install -y python python-pip
 
-WORKDIR /python27/jaeger_client
-COPY requirements.txt app.py ./
-COPY api/ ./api/
+
+# install my app
+WORKDIR /app
+
+COPY . .
+
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # expose ports
 EXPOSE 5000
+
 
 ## launch
 CMD [ "python", "server.py" ]
