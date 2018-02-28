@@ -14,7 +14,7 @@ spec:
       - image:  snowdeer/python-sample:v5
         name: python-sample
         ports:
-        - containerPort: 5000
+        - containerPort: 8080
           protocol: TCP
 ---
 apiVersion: v1
