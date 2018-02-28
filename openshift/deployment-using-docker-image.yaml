@@ -26,9 +26,9 @@ metadata:
 spec:
   ports:
   - name: python-sample
-    port: 8080
+    port: 80
     protocol: TCP
     targetPort: 8080
   selector:
-    sample-type: python-sample-pod
+    sample-type: python-sample
   type: LoadBalancer
