@@ -40,3 +40,12 @@ service "python-sample" created
 `-f` 옵션은 파일에서 `yaml` 파일을 불러온다는 뜻입니다. 
 
 위 예제 코드는 `deployment-using-docker-image.yaml` 파일 내의 설정에 따라 프로젝트를 배포하게 됩니다. 예제로 `Deployment`와 `Service`를 등록해놓았습니다.
+
+그 외에 GitHub 상의 소스코드로 OpenShift내에서 직접 Docker 이미지를 빌드하고 OpenShift 내부의 Docker Registry에 등록을 하는 방법은 다음과 같습니다.
+
+~~~
+$ oc create -f ./openshift/deployment-using-git.yaml
+buildconfig "python-sample" created
+deployment "python-sample" created
+service "python-sample" created
+~~~
