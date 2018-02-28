@@ -1,36 +1,36 @@
-apiVersion: extensions/v1
-  kind: BuildConfig
-    metadata:
-      labels:
-        app: python-sample
-      name: python-sample
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  labels:
+    app: python-sample
+  name: python-sample
 
-    spec:
-      failedBuildsHistoryLimit: 3
-      nodeSelector: null
-      output:
-        to:
-          kind: ImageStreamTag
-          name: 'python-sample:latest'
-      postCommit: {}
-      resources: {}
-      runPolicy: Serial
-      source:
-        git:
-          uri: 'https://github.com/snowdeer/openshift-python-sample.git'
-        type: Git
-      strategy:
-        dockerStrategy:
-          from:
-            kind: ImageStreamTag
-            name: 'ubuntu:latest'
-            
-        type: Docker    
-      successfulBuildsHistoryLimit: 5 
-      output:
-        to:
-          kind: ImageStreamTag
-          name: 'python-sample:latest'
+spec:
+  failedBuildsHistoryLimit: 3
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'python-sample:latest'
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    git:
+      uri: 'https://github.com/snowdeer/openshift-python-sample.git'
+    type: Git
+  strategy:
+    dockerStrategy:
+      from:
+        kind: ImageStreamTag
+        name: 'ubuntu:latest'
+        
+    type: Docker    
+  successfulBuildsHistoryLimit: 5 
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'python-sample:latest'
 ---
 apiVersion: extensions/v1
 kind: DeploymentConfig
