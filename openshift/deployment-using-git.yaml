@@ -61,3 +61,17 @@ spec:
   selector:
     app: python-sample
   type: LoadBalancer
+---
+apiVersion: v1
+kind: Route
+metadata:
+  name: python-sample
+  labels:
+    app: python-sample
+spec:
+  port: 
+    targetPort: python-sample
+  to:
+    kind: Service
+    name: python-sample
+    weight: 100
